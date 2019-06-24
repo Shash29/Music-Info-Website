@@ -1,0 +1,191 @@
+<html>
+		<head>
+			<style type="text/css">
+				body {background-color:black;
+					  background-size:cover;
+					  background-attachment:fixed;
+					  background-position:center;
+					  background-repeat:no-repeat;}
+
+				p.heading {text-align:left;
+						   margin-left:10px;
+						   margin-top:10px;
+						   padding:10px;}
+
+				.title {font-size:70px;
+						font-family:old english text mt;
+						color:white;}
+				.tline {font-size:20px;
+					    font-family:comic sans ms;
+					    color:white;}
+
+				p.navig {height:42.5px;
+					     margin-left:10px;
+						 margin-right:10px;
+						 background-color:dodgerblue;}
+				a.navigbtns {margin-left:20px;
+							 padding:10px;
+							 padding-left:15px;
+							 padding-right:15px;
+							 position:relative;top:10px;
+							 color:black;
+							 text-align:center;
+							 text-decoration:none;
+							 font-weight:bold;
+							 font-size:20px;}
+				a.navigbtns:hover {color:white;
+								   background-color:deeppink;}
+				#Home {background-color:darkorchid;}
+				#Home:Hover {background-color:darkorchid;color:black;}
+
+				<!--table.images {margin:50px;
+							  margin-left:345px;
+							  height:350px;
+							  width:600px;	
+							  background-color:lightslategray;}
+				td.imag {margin:30px;
+						 background-color:white;
+						 text-align:center;}-->
+				
+				p.descrip {margin-top:50px;
+						   margin-left:50px;
+						   margin-right:50px;
+						   padding:30px;
+						   background-color:rgba(0,0,0,0.6);
+						   color:white;
+						   font-size:20px;
+						   text-align:justify;}
+				.deshead {font-size:30px;color:yellow;text-align:center;font-family:Algerian;}
+
+				.genres {margin:50px;
+						 background-color:rgba(0,0,0,0.6);}
+				#genhead {padding-top:40px;
+						  text-align:center;
+						  font-size:60px;
+						  font-family:Brush Script MT;
+						  color:deeppink;}
+				table.GenT {margin-left:30px;margin-right:30px;}
+				td.gen {height:300px;
+						width:450px;
+						border-style:solid;
+						border-width:25px;
+						border-color:rgb(0,0,0);
+						text-align:center;
+						font-size:60px;
+						background-size:cover;}
+				td.gen a{padding-left:50px;
+						 padding-right:50px;
+						 padding-top:50px;
+						 padding-bottom:50px;
+						 color:white;
+						 text-decoration:none;}
+				td.gen a:Hover {font-weight:bold;}
+				
+				#blues {font-family:Vladimir Script;
+						font-style:underline;
+						font-weight:bold;
+						background-position:center;} 
+				#pop {font-family:Castellar;}    
+				#rock {font-family:Old English Text MT;}	
+				#jazz {font-family:Magneto;
+					   background-position:bottom;}	
+				#heavy_metal {font-family:AR DESTINE;
+							  font-size:50px;} 
+				<!--#rap {font-family:Algerian;}-->
+
+				#blues:Hover {border-color:dodgerblue;} 
+				#pop:Hover {border-color:gold;}    
+				#rock:Hover {border-color:red;}	
+				#jazz:Hover {border-color:deeppink;}	
+				#heavy_metal:Hover {border-color:midnightblue;} 
+				<!--#rap:Hover {color:red;border-color:red;}-->      
+			</style>
+
+			<script type="text/javascript">
+					function linkblink(id)
+					{
+						var tab=document.getElementById(id);
+						var cssque="#"+id+" a";
+						var lnk=document.querySelector(cssque);
+						if(id=="blues")
+						{
+							lnk.style.color="dodgerblue";
+						}
+						else if(id=="pop")
+						{
+							lnk.style.color="gold"
+						}
+						else if(id=="rock")
+						{
+							lnk.style.color="red"
+						}
+						else if(id=="jazz")
+						{
+							lnk.style.color="deeppink"
+						}
+						else if(id=="heavy_metal")
+						{
+							lnk.style.color="lightgrey"
+						}
+						else
+						{
+							lnk.style.color="darkorange"
+						}
+					}
+					
+					function linkres(id)
+					{
+						var tab=document.getElementById(id);
+						var cssque="#"+id+" a";
+						var lnk=document.querySelector(cssque);
+						lnk.style.color="white";
+					}
+
+			</script>
+		</head>
+
+		<body background="images\disco-nights.jpg" >
+				<p class="heading">
+					<span class="title">UMSIC</span><br/>
+					<span class="tline">exploring the world of music</span>
+				</p>
+
+				<p class="navig">
+					<a class="navigbtns" id="Home">Home</a>
+					<a class="navigbtns" id="Collection" href="Collection.html" >Collection</a>
+					<a class="navigbtns" id="Gallery" href="Gallery.html">Gallery</a>
+					<a class="navigbtns" id="About Us" href="About us.html">About Us</a>
+				</p>
+
+				<!--<p>
+					<table class="images" cellpadding="120px" cellspacing="20px">
+						<tr><td class="imag">Image 1</td></tr>
+					</table>
+				</p>-->
+
+				<p class="descrip">
+					<span class="deshead">WELCOME TO THE WORLD OF MUSIC!!</span><br/>
+					With lots of cool know-abouts teamed up with our hand-picked collection of Mesmerizing Pictures and Pumping Stereo,We take u on a voyage to 
+					the lands of some of the Greatest Genres of Music.
+					So,put on your headphones and get ready to dive into the Sea of Umsic,or Music as u say.
+				</p>
+
+				<div class="genres">
+							<p id="genhead">GENRES</p>
+							<table class="GenT" cellspacing="50px">
+								<tr>
+								<td class="gen" id="blues" onmouseover="linkblink(this.id);" onmouseout="linkres(this.id);" background="images\blues3.jpg" ><a href="g blues.html">Blues</a></td>
+								<td class="gen" id="pop" onmouseover="linkblink(this.id);" onmouseout="linkres(this.id);" background="images\pop2.jpg"><a href="g pop.html">Pop</a></td>
+								</tr>
+								<tr>
+								<td class="gen" id="rock" onmouseover="linkblink(this.id);" onmouseout="linkres(this.id);" background="images\rock guitar.jpg"><a href="g rock.html">Rock</a></td>
+								<td class="gen" id="jazz" onmouseover="linkblink(this.id);" onmouseout="linkres(this.id);" background="images\jazz 3.jpg"><a href="g jazz.html">Jazz</a></td>
+								</tr>
+								<tr>
+								<td class="gen" id="heavy_metal" onmouseover="linkblink(this.id);" onmouseout="linkres(this.id);" background="images\metal skull.jpg"><a href="g heavy metal.html">Heavy Metal</a></td>
+								<!--<td class="gen" id="rap" ><a>Rap</a></td>-->
+								</tr>
+							</table>
+				</div>
+		</body>
+</html>

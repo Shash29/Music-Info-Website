@@ -1,0 +1,359 @@
+<html>
+		<head>
+			<style type="text/css">
+				body {background-color:black;
+					  background-size:cover;
+					  background-repeat:no-repeat;
+					  background-attachment:fixed;
+					  background-position:center;}
+
+				p.heading {text-align:left;
+						   margin-left:10px;
+						   margin-top:10px;
+						   padding:10px;}
+
+				.title {font-size:70px;
+						font-family:old english text mt;
+						color:white;}
+				.tline {font-size:20px;
+					    font-family:comic sans ms;
+					    color:white;}
+
+				p.navig {height:42.5px;
+					     margin-left:10px;
+						 margin-right:10px;
+						 background-color:gold;}
+				
+				a.navigbtns {margin-left:20px;
+							 padding:10px;
+							 padding-left:15px;
+							 padding-right:15px;
+							 position:relative;top:10px;
+							 color:black;
+							 text-align:center;
+							 text-decoration:none;
+							 font-weight:bold;
+							 font-size:20px;}
+				a.navigbtns:hover {color:white;
+								   background-color:darkorange;}
+				#Collection {background-color:orange;}
+				#Collection:Hover {background-color:orange;color:black;}
+
+				#Collhead {padding-top:10px;
+						  text-align:center;
+						  font-size:45px;
+						  font-family:Showcard Gothic;
+						  color:Gold;}
+
+				div.gendiv {margin-left:75px;
+							margin-right:75px;
+							background-color:rgba(0,0,0,0.4);}
+				p.genhead {padding-top:25px;
+						   padding-bottom:40px;
+					       text-align:center;
+						   font-size:45px;
+						   font-family:Castellar;
+						   color:darkorange;}
+
+				#blues p.genhead {font-family:Vladimir Script;
+								  font-style:underline;
+								  font-weight:bold;
+								  color:dodgerblue;}
+				#pop p.genhead {font-family:Castellar;
+								  color:gold;}
+				#rock p.genhead {font-family:Old English Text MT;
+								  color:red;}
+				#jazz p.genhead {font-family:Magneto;
+								  color:deeppink;}
+				#heavy_metal p.genhead {font-family:AR DESTINE;
+								  color:lightgrey;}
+				<!--#rap p.genhead {font-family:Algerian;
+								  color:red;}-->
+				table.musicbox {margin-left:150px;
+								margin-right:150px;
+								margin-bottom:20px;
+								align:center;}
+
+				#blues table td.genpic {background-image:url("blues3.jpg");}
+				#pop table td.genpic {background-image:url("pop2.jpg");}
+				#rock table td.genpic {background-image:url("rock guitar.jpg");}
+				#jazz table td.genpic {background-image:url("jazz 3.jpg");}
+				#heavy_metal table td.genpic {background-image:url("metal skull.jpg");}
+
+				#blues table.musicbox {background-color:dodgerblue;}
+				#pop table.musicbox {background-color:gold;}
+				#rock table.musicbox {background-color:red;}
+				#jazz table.musicbox {background-color:deeppink;}
+				#heavy_metal table.musicbox {background-color:lightgrey;}
+				<!--#rap table.musicbox {background-color:red;}-->	
+
+				td.genpic {height:65px;
+						   width:150px;
+						   background-color:black;
+						   background-size:cover;
+						   background-position:center;}
+				td.trtitle {height:65px;
+							width:600px;
+							font-size:30px;
+							text-align:left;}
+				td.music {height:65px;
+						  width:600px;
+						  background-color:black;}
+
+				audio {width:600px;height:65px;}
+				
+			</style>
+
+			<script type="text/javascript">
+				function oneplay(id)
+				{
+					var i=0;
+					var pplay=document.getElementById(id);
+					var Mar=document.querySelectorAll("audio");
+					
+					for(i=0;i<Mar.length;i+=1)
+					{
+						if(Mar[i]!=pplay)
+						{
+							Mar[i].pause();
+						}
+					}
+				}
+			</script>
+		</head>
+
+		<body background="images\recordplay.jpg">
+				<p class="heading">
+					<span class="title">UMSIC</span><br/>
+					<span class="tline">exploring the world of music</span>
+				</p>
+
+				<p class="navig">
+					<a class="navigbtns" id="Home" href="Homepage.html" >Home</a>
+					<a class="navigbtns" id="Collection" >Collection</a>
+					<a class="navigbtns" id="Gallery" href="Gallery.html">Gallery</a>
+					<a class="navigbtns" id="About Us" href="About us.html">About Us</a>
+				</p>
+
+				<p id="Collhead">Collection</p>
+
+				<div class="gendiv" id="blues">
+					<p class="genhead">Blues</p>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Caddy blues</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="caddyblues" onplay="oneplay(this.id);" >
+								<source src="audio\POL-caddy-blues-short.mp3" type="audio/mpeg" />
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Autumn Leaves</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="autumnleaves" onplay="oneplay(this.id);" >
+								<source src="audio\Blues\POL-autumn-leaves-short.mp3" type="audio/mpeg" />
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Full Hand</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="fullhand" onplay="oneplay(this.id);" >
+								<source src="audio\Blues\POL-full-hand-short.mp3" type="audio/mpeg" />
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Red Chili</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="redchili" onplay="oneplay(this.id);" >
+								<source src="audio\Blues\POL-red-chili-short.mp3" type="audio/mpeg" />
+							</audio> 
+						</td></tr>
+					</table>
+
+				</div>
+
+				<div class="gendiv" id="pop">
+					<p class="genhead">Pop</p>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >80s Pop</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="80spop" onplay="oneplay(this.id);" >
+								<source src="audio\POL-80s-pop-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Move in Sync</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="moveinsync" onplay="oneplay(this.id);" >
+								<source src="audio\Pop\POL-move-in-sync-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Over the Top</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="overthetop" onplay="oneplay(this.id);" >
+								<source src="audio\Pop\POL-over-the-top-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+				</div>
+
+				<div class="gendiv" id="rock">
+					<p class="genhead">Rock</p>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >High Five</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="highfive" onplay="oneplay(this.id);" >
+								<source src="audio\rock\POL-high-five-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Open Wings</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="openwings" onplay="oneplay(this.id);" >
+								<source src="audio\rock\POL-open-wings-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Black Truck</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="blacktruck" onplay="oneplay(this.id);" >
+								<source src="audio\rock\POL-black-truck-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Rockin-LA</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="rockin-la" onplay="oneplay(this.id);" >
+								<source src="audio\rock\POL-rockin-la-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+				</div>
+
+				<div class="gendiv" id="jazz">
+					<p class="genhead">Jazz</p>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Big Fish</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="bigfish" onplay="oneplay(this.id);" >
+								<source src="audio\jazz\POL-big-fish-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Lucky Cop</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="luckycop" onplay="oneplay(this.id);" >
+								<source src="audio\jazz\POL-lucky-cop-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Metro</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="metro" onplay="oneplay(this.id);" >
+								<source src="audio\jazz\POL-metro-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >My Way</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="my way" onplay="oneplay(this.id);" >
+								<source src="audio\jazz\POL-my-way-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+				</div>
+
+				<div class="gendiv" id="heavy_metal">
+					<p class="genhead">Heavy Metal</p>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Smasher</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="smasher" onplay="oneplay(this.id);" >
+								<source src="audio\heavy metal\POL-smasher-short.wav" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Against the System</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="againstthesystem" onplay="oneplay(this.id);" >
+								<source src="audio\heavy metal\POL-against-the-system-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Guilty</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="guilty" onplay="oneplay(this.id);" >
+								<source src="audio\heavy metal\POL-guilty-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Desert Squad</td></tr>
+						<tr><td class="music" >
+							<audio controls="true" id="desertsquad" onplay="oneplay(this.id);" >
+								<source src="audio\heavy metal\POL-desert-squad-short.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+
+				</div>
+
+				<!--<div class="gendiv" id="rap">
+					<p class="genhead">Rap</p>
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Sample Music Track</td></tr>
+						<tr><td class="music" >
+							<audio controls>
+								<source src="F:\Grand Theft Auto Vice City\Audio\Hotel.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+				</div>-->
+
+				<!--<div class="gendiv">
+					<p class="genhead">Genre Name</p>
+					<table class="musicbox" cellspacing="20px">
+						<tr><td class="genpic" rowspan="2"></td><td class="trtitle" >Sample Music Track</td></tr>
+						<tr><td class="music" >
+							<audio controls>
+								<source src="F:\Grand Theft Auto Vice City\Audio\Hotel.mp3" type="audio/mpeg">
+							</audio> 
+						</td></tr>
+					</table>
+				</div>-->
+		</body>
+</html>
